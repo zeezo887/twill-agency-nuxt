@@ -22,6 +22,8 @@ const { data: officeResponse } = await useAsyncData('offices', () => {
 const offices = $twill.transform(
     officeResponse.value as JsonApiDataResponse
 )
+
+useSettingsHeadSeo('contact')
 </script>
 
 <style scoped>

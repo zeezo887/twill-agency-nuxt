@@ -39,7 +39,7 @@ const people = $twill.transform(
     peopleResponse.value as JsonApiDataResponse
 )
 
-console.log(people)
+useSettingsHeadSeo('about')
 </script>
 
 <style>

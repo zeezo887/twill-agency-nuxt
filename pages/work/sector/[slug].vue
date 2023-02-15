@@ -34,6 +34,8 @@ const { data: sectorResponse } = await useAsyncData(`sector-${route.params.slug}
 const sector = $twill.transform(
     sectorResponse.value as JsonApiDataResponse
 )[0]
+
+useHeadSeo({title: sector.title})
 </script>
 
 <style scoped>

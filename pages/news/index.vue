@@ -4,10 +4,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "index"
-}
+<script setup>
+
+useSettingsHeadSeo('news')
 </script>
 
 <style scoped>

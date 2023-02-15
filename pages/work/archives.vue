@@ -32,6 +32,8 @@ const { data: workResponse } = await useAsyncData('works', () => {
 const works = $twill.transform(
     workResponse.value as JsonApiDataResponse
 )
+
+useSettingsHeadSeo("works")
 </script>
 
 <style scoped>

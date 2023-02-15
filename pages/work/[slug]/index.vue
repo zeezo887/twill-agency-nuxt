@@ -34,6 +34,7 @@ const work = $twill.transform(
     workResponse.value as JsonApiDataResponse
 )[0]
 
+useHeadSeo({title: work.title})
 </script>
 
 <style scoped>

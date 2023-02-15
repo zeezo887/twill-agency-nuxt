@@ -25,6 +25,8 @@ const { data: sectorsResponse } = await useAsyncData('sectors', () => {
 const sectors = $twill.transform(
     sectorsResponse.value as JsonApiDataResponse
 )
+
+useSettingsHeadSeo("sectors")
 </script>
 
 <style scoped>

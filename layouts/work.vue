@@ -1,8 +1,10 @@
 <template>
   <div>
     <AppHeader />
-    <WorkFilter />
-    <slot />
+    <main class="pb-15">
+      <WorkFilter />
+      <slot />
+    </main>
     <AppFooter />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/work/${work.slug}`" class="work-card mb-12">
+  <NuxtLink :to="`/work/${work.slug}`" :class="{'work-card__with-subtitle': showSubtitle && work.subtitle, 'work-card': true}">
     <div class="work-card__content">
       <div class="work-card__image">
         <img
@@ -12,6 +12,7 @@
 
       <div class="work-card__title">
         <h3 class="pt-3">{{ work.title }}</h3>
+        <p class="work-card__subtitle pt-3">{{ work.subtitle }}</p>
       </div>
     </div>
   </NuxtLink>
@@ -19,7 +20,8 @@
 
 <script setup>
 const props = defineProps({
-  work: Object
+  work: Object,
+  showSubtitle: false
 })
 
 const image = extractCropFromMediaRole(props.work.media, {role: "cover"})
@@ -33,6 +35,19 @@ const image = extractCropFromMediaRole(props.work.media, {role: "cover"})
   .work-card__title {
     display: inline-block;
   }
+
+  .work-card__subtitle {
+    display: none;
+  }
+
+  .work-card.work-card__with-subtitle:hover .work-card__subtitle {
+    display: block;
+  }
+
+  .work-card.work-card__with-subtitle:hover .work-card__title h3 {
+    display: none;
+  }
+
   .work-card:hover .work-card__title h3 {
     border-bottom: 1px solid #111826;
   }

@@ -4,10 +4,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "index"
-}
+<script setup>
+useHeadSeo({title: "Privacy policy"})
 </script>
 
 <style scoped>

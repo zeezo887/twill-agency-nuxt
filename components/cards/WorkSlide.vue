@@ -12,6 +12,7 @@
 
       <div class="slide__title">
         <h2 class="">{{ work.title }}</h2>
+        <h3 class="">{{ work.subtitle }}</h3>
       </div>
     </div>
   </NuxtLink>

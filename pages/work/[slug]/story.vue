@@ -75,6 +75,8 @@ const { data: workResponse } = await useAsyncData(`work-${route.params.slug}`, (
 const work = $twill.transform(
     workResponse.value as JsonApiDataResponse
 )[0]
+
+useHeadSeo({title: work.title})
 </script>
 
 <style>

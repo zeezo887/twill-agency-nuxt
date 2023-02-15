@@ -62,9 +62,9 @@ const person = $twill.transform(
     personResponse.value as JsonApiDataResponse
 )[0]
 
-console.log(person)
-
 const image = extractCropFromMediaRole(person.media, {role: "main"})
+
+useHeadSeo({title: `${person.firstName} ${person.lastName}`})
 
 </script>
 

@@ -39,7 +39,6 @@ const settings = $twill.transform(
 
 const socialLinks = settings.filter(setting => setting.section === 'social')
 
-console.log(settings)
 </script>
 
 <style scoped>

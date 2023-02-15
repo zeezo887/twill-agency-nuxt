@@ -34,6 +34,8 @@ const { data: disciplineResponse } = await useAsyncData(`discipline-${route.para
 const discipline = $twill.transform(
     disciplineResponse.value as JsonApiDataResponse
 )[0]
+
+useHeadSeo({title: discipline.title})
 </script>
 
 <style scoped>

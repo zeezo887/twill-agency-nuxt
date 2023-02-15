@@ -8,13 +8,14 @@
     </div>
 
     <div class="work-header__action flex justify-center items-center" v-if="viewLink">
-      <Link :to="viewLink">View All</Link>
+      <NuxtLink class="link" :to="viewLink">
+        View All
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Link from "~/components/Link.vue";
 export default {
   name: "WorkHeader",
   props: ["title", "count", "viewLink"]
@@ -37,5 +38,13 @@ export default {
 .work-header__action:hover {
   border-bottom: 1px solid #e61428;
 }
+
+/*.link {*/
+/*  color: #e61428;*/
+/*}*/
+
+/*.link:hover {*/
+/*  border-bottom: 1px solid #e61428;*/
+/*}*/
 
 </style>
