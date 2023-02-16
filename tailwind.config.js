@@ -10,10 +10,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'tablet-v': '600px',
-      'tablet-h': '800px',
-      'laptop': '1040px',
-      'desktop': '1280px',
+      'sm': '600px',
+      'lg': '1040px',
     },
     extend: {},
   },
