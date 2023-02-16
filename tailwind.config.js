@@ -14,6 +14,9 @@ module.exports = {
       'lg': '1040px',
     },
     extend: {},
+    container: {
+      padding: '1rem'
+    }
   },
   plugins: [],
 }

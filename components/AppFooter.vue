@@ -1,30 +1,27 @@
 <template>
-  <footer class="footer text-slate-500">
+  <footer class="text-slate-500 text-base lg:text-xl">
     <div class="container mx-auto">
-      <two-items class="py-10">
-        <div>
-          <ul class="flex footer__links mb-1">
-            <li><a>Subscribe to our Newsletter</a></li>
+      <div class="flex flex-row lg:justify-between py-4">
+        <div class="basis-1/2">
+          <ul class="flex flex-col lg:flex-row mb-1">
+            <li class="lg:mr-10"><a>Subscribe to our Newsletter</a></li>
             <li><NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink></li>
           </ul>
-          <span>© <span>2003 - 2023</span></span>
+          <span>© <span class="hidden sm:inline-block">2003 - 2023</span> Twill</span>
         </div>
         <div>
-          <ul class="flex social-links justify-end">
-            <li class="social-link" v-for="socialLink in socialLinks">
+          <ul class="flex flex-col lg:flex-row justify-end">
+            <li v-for="socialLink in socialLinks" class="capitalize lg:ml-10">
               <a :href="socialLink.value" target="_blank">{{ socialLink.key.replace('_url', '') }}</a>
             </li>
-<!--            <li class="social-link"><a>Instagram</a></li>-->
-<!--            <li class="social-link"><a>Twitter</a></li>-->
           </ul>
         </div>
-      </two-items>
+      </div>
     </div>
   </footer>
 </template>
 
 <script lang="ts" setup>
-import TwoItems from "~/components/lists/TwoItems.vue";
 import {JsonApiDataResponse} from "@area17/twill-api-client";
 
 const { $twill } = useNuxtApp()
@@ -42,15 +39,4 @@ const socialLinks = settings.filter(setting => setting.section === 'social')
 </script>
 
 <style scoped>
-.footer {
-  font-size: 20px;
-}
-.footer__links li {
-  margin-right: 40px;
-}
-
-.social-links .social-link {
-  margin-left: 40px;
-  text-transform: capitalize;
-}
 </style>
