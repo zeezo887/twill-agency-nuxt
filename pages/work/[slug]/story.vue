@@ -11,7 +11,7 @@
             <Link :to="`/work/${work.slug}`">Portfolio view</Link>
           </div>
 
-          <two-items class="work__metas mt-7">
+          <div class="grid grid-cols-2 gap-10 mt-7">
             <div class="work__meta-col">
               <div class="work__meta">
                 <p>Client</p>
@@ -40,7 +40,7 @@
                 <span>Pentagram</span>
               </div>
             </div>
-          </two-items>
+          </div>
         </div>
         <div class="work-story">
           <div v-for="block in work.blocks.default">

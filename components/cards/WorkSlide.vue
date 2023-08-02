@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="`/work/${work.slug}`" class="slide">
     <div class="slide__content">
-      <div class="slide__image">
+      <div class="slide__image overflow-hidden h-[120vw] sm:h-[100vw] lg:h-screen relative">
         <img
             v-if="image"
             :srcset="image.srcset"
@@ -10,9 +10,10 @@
         />
       </div>
 
-      <div class="slide__title">
-        <h2 class="">{{ work.title }}</h2>
-        <h3 class="">{{ work.subtitle }}</h3>
+      <div class="slide__title w-full text-lg lg:text-2xl bottom-[13px] lg:bottom-[50px] absolute">
+        <div class="container mx-auto">
+          <h2 class=""><span>{{ work.title }}</span></h2>
+          <h3 class="">{{ work.subtitle }}</h3></div>
       </div>
     </div>
   </NuxtLink>
@@ -35,24 +36,26 @@ export default {
   position: relative;
 }
 .slide__title {
-  position: absolute;
-  bottom: 10px;
-  left: 50px;
   text-align: left;
-  font-size: 25px;
   font-weight: 500;
-  line-height: 30px;
 }
 
 .slide {
   width: 100%;
 }
 
-.slide:hover .slide__title h2 {
+.slide:hover .slide__title h2 span {
   border-bottom: 1px solid #111826;
 }
 
 img {
-  width: 100%;
+  min-width: 101%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: unset;
 }
+
 </style>

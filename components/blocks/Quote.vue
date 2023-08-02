@@ -1,14 +1,14 @@
 <template>
   <NuxtLink :to="url" class="quote py-5 pr-10 clear" v-if="type !== 'story'">
-    <blockquote class="quote__text tablet-v:float-right tablet-v:w-1/2 tablet-v:clear-both">
-      <p class="text-[35px] font-semibold">{{ block.content.quote }}</p>
+    <blockquote class="quote__text sm:float-right sm:w-1/2 sm:clear-both">
+      <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">{{ block.content.quote }}</p>
       <br><span class="quote__link"><span>Learn more about the project</span></span>
     </blockquote>
   </NuxtLink>
 
   <div class="quote py-5 pr-10" v-else>
     <blockquote class="quote__text">
-      <p class="text-[35px] font-semibold">{{ block.content.quote }}</p>
+      <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">{{ block.content.quote }}</p>
       </blockquote>
   </div>
 </template>
@@ -53,7 +53,5 @@ export default {
   display: table;
 }
 
-.quote__text p {
-  line-height: 42px;
-}
+
 </style>

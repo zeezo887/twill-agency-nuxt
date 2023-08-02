@@ -10,26 +10,26 @@
         />
       </div>
     </div>
-    <h3 class="font-semibold mt-4 mb-3 text-lg tablet-v:text-xl tablet-h:text-2xl laptop:text-3xl">
+    <h3 class="font-semibold mt-4 mb-3 text-lg sm:text-xl lg:text-2xl">
       <span>{{ office.title }}</span>
       <br>
 
     </h3>
-    <div class="laptop:grid laptop:grid-cols-2 laptop:gap-8">
+    <div class="lg:grid lg:grid-cols-2 gap-8 text-base lg:text-lg">
       <div>
-        <p class="mb-4">
-          <a href="mailto:{{ office.email }}">{{ office.email }}</a>
+        <p class="mb-6">
+          <a href="mailto:{{ office.email }}" class="underline">{{ office.email }}</a>
           <br>
           {{ office.phone }}
         </p>
-        <p class="mb-4">
+        <p class="mb-4" v-if="office.street">
           {{ office.street }} <br>
           {{ office.city }} {{ office.zipcode }} <br>
           {{ office.country }} <br>
           <a class="underline" href="{{ office.directions }}">Get directions</a>
         </p>
       </div>
-      <div>
+      <div class="">
         {{ office.description }}
       </div>
     </div>

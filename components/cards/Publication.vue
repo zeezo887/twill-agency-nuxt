@@ -9,7 +9,7 @@
       />
     </div>
     <div class="publication-card__title px-5 basis-1/2">
-      <h4 class="">{{ work.title }}</h4>
+      <h4 class=""><span>{{ work.title }}</span></h4>
       <p class="text-slate-500 mt-2">
         by {{ owner }} <br>
         {{ work.client }} <br>
@@ -40,5 +40,9 @@ export default {
   font-size: 27px;
   line-height: 32px;
   font-weight: 500;
+}
+
+.publication-card:hover h4 span {
+  border-bottom: 1px solid #111826;
 }
 </style>

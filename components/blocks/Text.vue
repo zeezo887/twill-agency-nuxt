@@ -1,5 +1,5 @@
 <template>
-  <div class="text py-5" v-html="html">
+  <div class="text py-5 text-base leading-6 sm:text-lg sm:leading-7 md:text-xl md:leading-8 " v-html="html">
   </div>
 </template>
 
@@ -13,9 +13,6 @@ export default {
 <style>
   .text p {
     margin-bottom: 20px;
-    line-height: 28px;
-    font-size: 17px;
-    font-weight: 500;
   }
 
   .text a {

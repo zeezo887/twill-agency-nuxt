@@ -13,4 +13,8 @@ export default defineNuxtConfig({
             twillApi: process.env.NUXT_PUBLIC_TWILL_API_BASE_URL
         }
     },
+    modules: [
+        '@nuxt/image-edge',
+        '@pinia/nuxt',
+    ],
 })

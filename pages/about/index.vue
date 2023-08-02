@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto">
-    <div class="block tablet-h:grid tablet-h:grid-cols-2 tablet-h:gap-8 pt-16">
+    <div class="block md:grid md:grid-cols-2 md:gap-8 pt-16">
       <div>
         <Heading :text="about.tagline" />
       </div>
-      <div class="intro mt-10 tablet-h:mt-0" v-html="about.text">
+      <div class="intro text-base md:text-lg mt-10 md:mt-0" v-html="about.text">
       </div>
     </div>
 
@@ -44,7 +44,7 @@ useSettingsHeadSeo('about')
 
 <style>
 .intro {
-  font-size: 20px;
+  //font-size: 20px;
 }
 .intro p {
   margin-bottom: 20px;

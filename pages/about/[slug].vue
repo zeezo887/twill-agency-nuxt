@@ -1,22 +1,22 @@
 <template>
   <div class="container mx-auto pt-16">
-    <two-items>
-      <div>
-        <div class="mb-10">
-          <Heading :text="`${person.firstName} ${person.lastName}`" />
-          <Heading :text="person.officeName" class="text-slate-500" />
-        </div>
-
-        <Text :html="person.biography"/>
+    <two-items class="relative">
+      <div class="mb-10">
+        <Heading :text="`${person.firstName} ${person.lastName}`" />
+        <Heading :text="person.officeName" class="text-slate-500" />
       </div>
-      <div class="">
+      <div class="sm:absolute sm:w-1/2 sm:right-0">
         <img
             v-if="image"
             :srcset="image.srcset"
             :src="image.src"
             :alt="image.alt"
+            class="w-full"
         />
       </div>
+    </two-items>
+    <two-items>
+      <Text :html="person.biography"/>
     </two-items>
 
     <section class="publications-section mt-10">

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="`/about/${person.slug}`" class="person-card">
+    <NuxtLink :to="`/about/${person.slug}`" class="person-card block mb-11">
       <div class="person-card__body">
         <div class="person-card__image">
           <img
@@ -7,6 +7,7 @@
               :srcset="image.srcset"
               :src="image.src"
               :alt="image.alt"
+              class="w-full"
           />
         </div>
       </div>
@@ -32,5 +33,7 @@ export default {
 </script>
 
 <style scoped>
-
+.person-card:hover .person-card__title span {
+  border-bottom: 1px solid #111826;
+}
 </style>

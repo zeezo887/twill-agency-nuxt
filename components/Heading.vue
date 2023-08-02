@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-[50px]">{{ text }}</h2>
+  <h2 class="text-[35px] sm:text-[40px] lg:text-[50px] font-bold">{{ text }}</h2>
 </template>
 
 <script>

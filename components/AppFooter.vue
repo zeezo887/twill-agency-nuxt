@@ -1,16 +1,15 @@
 <template>
-  <footer class="text-slate-500 text-base lg:text-xl">
+  <footer class="text-slate-500 pt-14 text-base lg:text-xl">
     <div class="container mx-auto">
       <div class="flex flex-row lg:justify-between py-4">
         <div class="basis-1/2">
           <ul class="flex flex-col lg:flex-row mb-1">
-            <li class="lg:mr-10"><a>Subscribe to our Newsletter</a></li>
             <li><NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink></li>
           </ul>
           <span>© <span class="hidden sm:inline-block">2003 - 2023</span> Twill</span>
         </div>
         <div>
-          <ul class="flex flex-col lg:flex-row justify-end">
+          <ul class="flex flex-col lg:flex-row justify-end ml-4">
             <li v-for="socialLink in socialLinks" class="capitalize lg:ml-10">
               <a :href="socialLink.value" target="_blank">{{ socialLink.key.replace('_url', '') }}</a>
             </li>

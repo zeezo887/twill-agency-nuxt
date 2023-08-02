@@ -1,13 +1,18 @@
 <template>
   <div class="container mx-auto">
     <div class="workFilter pt-16">
-      <div class="workFilter__title">
+      <div class="workFilter__title md:absolute bottom-0 mb-5 sm:mb-0">
         <Heading text="Work" />
       </div>
       <div class="workFilter__nav flex justify-center">
-        <NuxtLink to="/work" class="flex justify-center items-center h-16 px-3 py-2 ml-2 mr-2 text-sm font-medium text-gray-400" aria-current="page">Type of client</NuxtLink>
-        <NuxtLink to="/work/disciplines" class="flex justify-center items-center h-16 px-3 py-2 ml-2 mr-2 text-sm font-medium text-gray-400" aria-current="page">Type of work</NuxtLink>
-        <NuxtLink to="/work/archives" class="flex justify-center items-center h-16 px-3 py-2 ml-2 mr-2 text-sm font-medium text-gray-400" aria-current="page">All projects</NuxtLink>
+        <NuxtLink
+            v-for="link in links"
+            :to="link.url"
+            class="flex justify-center items-center h-8 sm:h-16 sm:px-3 py-2 ml-2 mr-2 font-medium text-gray-400 text-sm sm:text-base md:text-lg"
+            aria-current="page"
+        >
+            {{ link.title  }}
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -15,7 +20,16 @@
 
 <script>
 export default {
-  name: "WorkFilter"
+  name: "WorkFilter",
+  data() {
+    return {
+      links: [
+        {url: '/work', title: 'Type of client'},
+        {url: '/work/disciplines', title: 'Type of work'},
+        {url: '/work/archives', title: 'All projects'},
+      ]
+    }
+  }
 }
 </script>
 
@@ -26,11 +40,6 @@ export default {
   position: relative;
 }
 
-.workFilter__title {
-  position: absolute;
-  bottom: 0;
-}
-
 .workFilter__nav {
   text-transform: uppercase;
 }
@@ -39,7 +48,7 @@ export default {
   color: #111826;
 }
 
-.router-link-active {
+.router-link-exact-active {
   border-bottom: 1px solid #111826;
 }
 </style>

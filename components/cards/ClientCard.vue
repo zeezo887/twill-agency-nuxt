@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="`/work/sector/${sector.slug}`" class="client-card">
-    <div class="client-card__content">
+    <div class="client-card__content pb-7">
       <div class="client-card__header mb-5">
         <WorkHeader :title="sector.title" :count="sector.works.length" />
       </div>
@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style>
-.client-card:hover .work-header__title {
+.client-card:hover .work-header__title span {
   border-bottom: 1px solid #111826;
 }
 </style>
