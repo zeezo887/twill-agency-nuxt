@@ -1,6 +1,4 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Twill Agency Nuxt Example
 
 ## Setup
 
@@ -15,6 +13,11 @@ npm install
 
 # pnpm
 pnpm install
+```
+Then copy the example env and update the NUXT_PUBLIC_TWILL_API_BASE_URL to your base API URL
+
+```
+cp .env.example .env
 ```
 
 ## Development Server
